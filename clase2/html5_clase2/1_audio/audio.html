@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Audio en HTML5</title>
+		<meta charset="utf-8">
+		<style>
+			audio{
+				width: 150px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Audio</h1>
+		
+		<!--
+			controls: Player (play, stop, volumen, etc.)
+			
+			autoplay: reproduce automáticamente. No hagas sufrir a tus usuarios :(
+			
+			loop: vuelve a comenzar
+			
+		-->
+		<audio controls autoplay loop>
+			<!--
+				Ofrecer distintos formatos.
+			-->
+			<source src="song.ogg">
+			<source src="song.mp3">
+			<source src="song.wav">
+			<!-- Lo que ponga entre la etiqueta servirá como fallback -->
+			Tu navegador está muy viejo :(
+		</audio>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

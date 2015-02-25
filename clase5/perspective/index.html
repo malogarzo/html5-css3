@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>What on Earth is Perspective?</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+	<link href="slideshow.css" rel="stylesheet" />
+	<link href="theme.css" rel="stylesheet" />
+	<link href="talk.css" rel="stylesheet" />
+	<script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="30">
+
+<header id="intro" class="slide">
+	<h1>
+		Perspectiva<br>
+		<span>en Diseño Web</span>
+	</h1>
+	<p class="attribution">By Eva Ferreira</p>
+</header>
+
+<section>	
+	<section class="slide">
+		<h2>The Z plane</h2>
+		<img src="img/plane.gif" alt="The Plane"> 
+	</section>
+	
+	<section class="slide transform">
+		<h2>Transform Property</h2>
+		<div class="delayed">Scale</div>
+		<div class="delayed">Skew</div>
+		<div class="delayed">Rotate</div>
+		<div class="delayed">Translate</div>
+		<div class="delayed">Salad</div>
+		<p class="delayed">El espacio original continua ocupado</p>
+	</section>
+	
+	<header class="slide">
+		<h1>Transform Origin</h1>
+	</header>
+	
+	<section class="live demo slide origin">
+		<h2>Transform-origin</h2>
+		<div class="left">
+			<div class="no">
+				No transform-origin
+			</div>
+			<textarea class="transform-snippet">
+.no:hover{
+ transform: rotate(40deg) scale(0.6);
+}
+			</textarea>
+		</div>
+		<div class="right">
+			<div class="yes">
+				Transform-origin
+			</div>
+			<textarea class="transform-snippet">
+.yes:hover{
+ transform: rotate(40deg) scale(0.6);
+}
+			</textarea>
+		</div>
+	</section>
+	
+	<header class="slide">
+		<h1>The father</h1>
+	</header>
+	
+	<section class="live demo slide father">
+		<h2>Daddy saves the day!</h2>
+		<div class="darth">
+			<div>I am your... son?</div>
+		</div>
+		
+		<div class="left">
+			<h3>Our HTML</h3>
+			<textarea>
+<div class="darth">
+	<div>I am your... son?</div>
+</div>
+			</textarea>
+		</div>
+		
+		<div class="right">
+			<h3>Our CSS</h3>
+			<textarea class="transform-snippet">
+.darth:hover > div{ 
+	transform: rotate(360deg) scale(0.6);
+	transform-origin: 200px top;
+}
+			</textarea>
+		</div>
+		
+	</section>
+	
+	
+	<header class="slide">
+		<h1>Perspectiva con Transform</h1>
+	</header>
+	
+	<section class="slide rotate">
+		<h2>Perspectiva con Transform</h2>
+		<ol>
+			<li>Crear un elemento padre</li>
+			<li>Aplicar <pre>transform-style: preserve-3d;</pre></li>
+			<li>Aplicar <pre>transform: perspective(-<em>valor</em>-);</pre></li>
+		</ol>
+	</section>
+	
+	<section class="live demo slide transfy">
+		<h2>Perspectiva con Transform</h2>
+			<textarea class="transform-snippet">
+.daddy{ transform-style: preserve-3d;
+	transform: perspective(600px);}
+.son{
+	background: rgba(0,200,0,0.7);
+}
+			</textarea>
+		<div class="daddy">
+			<div class="son">
+				<p>	I'm your son. </p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="slide">
+		<h2>Entonces...</h2>
+		<ul>
+			<li class="delayed">Preserve-3d crea un nuevo stacking context, lo mismo que hace Opacity.</li>
+			<li class="delayed size">El valor de la perspectiva determina la intensidad del efecto.
+				<img src="img/we-are-small.jpg"  class="delayed" alt="Perspective">
+			</li>
+			<li class="delayed">Podemos modificar el punto de fuga con transform-origin</li>
+		</ul>
+	</section>
+	
+	<section class="slide">
+		<iframe src="http://evaferreira.com.ar/perspective/anchor_point.html" width="900" height="600"></iframe>
+	</section>
+		
+	<header class="slide">
+		<h1>Backface visibility</h1>
+	</header>
+	
+	<section class="live demo slide backf">
+		<h2>Backface visibility</h2>
+<textarea class="transform-snippet">
+.daddy{ transform-style: preserve-3d;
+	transform: perspective(600px);}
+.son{
+	background: rgba(0,200,0,0.7);
+}
+			</textarea>
+		<div class="daddy">
+			<div class="son">
+				I'm your son (:
+			</div>
+		</div>
+	</section>
+	
+	<header class="slide">
+		<h1>Flip a card!</h1>
+	</header>
+	
+	<section class="slide">
+		<h2>Our HTML</h2>
+		<pre>
+&lt;div class="dad"&gt;
+	&lt;div class="hidden"&gt;
+		&lt;div class="front"&gt;
+			&lt;img&gt;
+		&lt;/div&gt;
+		&lt;div class="back"&gt;
+			&lt;img&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+		</pre>
+	</section>
+	
+	<section class="live demo slide flip">
+		<h2>Card flipping</h2>
+		
+		<textarea class="transform-snippet">
+.dad{
+	transform-style: preserve-3d;
+	transform: perspective(800px);
+}
+.front{ 
+}
+.back{
+}
+
+			</textarea>
+		
+		<div class="daddy">
+			<div class="dad">
+				<div class="hidden">
+					<div class="front">
+						<img src="img/front_.png" alt="Frontal part of Hogwarts letter">
+					</div>
+					<div class="back">
+						<img src="img/back_.png" alt="Other part of Hogwarts letter">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</section>
+	
+	<section class="slide">
+		<iframe src="http://www.evaferreira.com.ar/perspective/hogwarts.html" width="900" height="600"></iframe>
+	</section>
+	
+	
+	<header class="slide">
+		<h1>Otros</h1>
+	</header>
+	
+	<section class="live demo slide other">
+		<h2>Otros</h2>
+		<textarea class="transform-snippet">
+.daddy{
+	transform-style: preserve-3d;
+	transform: perspective(800px);
+}
+.daddy:hover .ron{
+	transform: rotateY(30deg);
+}
+
+			</textarea>
+			<div class="daddy">
+				<div class="ron">
+					Otros
+				</div>
+			</div>
+			
+	</section>
+	
+	<header class="slide">
+		<h1>Compatibilidad con navegadores</h1>
+	</header>
+	
+	<section class="slide">
+		<h2>Compatibilidad</h2>
+		<img src="img/browsers_compatibility.png" alt="Compatibility">
+	</section>
+
+
+</section>
+
+
+
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="pruebas.js"></script>
+
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+	new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+	new CSSControl(cssControls[i]);
+}
+</script>
+	
+</body>
+</html>

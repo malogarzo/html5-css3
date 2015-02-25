@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Formularios</title>
+		<meta charset="utf-8">
+		<link href="formulario.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Formularios</h1>
+		
+		<form action="enviar.php" method="post">
+			<label for="nombre">Nombre: </label>
+			<input type="text" name="nombre" required><br>
+			
+			<label for="apellido">Apellido: </label>
+			<input type="text" name="apellido" placeholder="Escriba aquí su apellido"> <br>
+			
+			<label for="email">Email: </label>
+			<!-- 
+				required -> Campo obligatorio
+				type="email" -> Verifica que sea una dirección de email válida
+				
+			-->
+			<input type="email" name="email" required title="Dirección de email fea"><br>
+			
+			<!--
+				type="url" -> URL -> http/https
+				Anti usuario
+				
+				color -> Selección de color, se puede marcar un predeterminado con value
+			-->
+			URL: <input type="url" value="http://">
+			<br>
+			Color: <input type="color" value="#FF0000">
+			
+			<br>
+			<!--
+				Date picker! Solo en Chrome :(
+			-->
+			Fecha: <input type="date">
+			<br>
+			<!-- Solo para algunos celulares, adapta el teclado 
+				Expresiones regurales
+				Regular Expression
+			-->
+			Teléfono: <input type="tel" pattern="[0-9]{4}-[0-9]{4}" title="4444-4444">
+			
+			<br>
+			<!--
+				Valores numéricos.
+				Máximo y mínimo
+			-->
+			Edad: <input type="number" max="25" min="18">
+			
+			<br>
+			Rango <input type="range" min="0" max="100" value="90" step="20">
+			
+			<br>
+			<!--
+				Conecto la lista con el atributo list
+			-->	
+			Ciudades <input type="text" list="ciudades">
+			
+			
+			<datalist id="ciudades">
+				<option>Berlín</option>
+				<option>Buenos Aires</option>
+				<option>Córdoba</option>
+				<option>Londres</option>
+			</datalist>
+			
+			
+			<br>
+			Comentario: <textarea name="comentario"></textarea>
+			
+			<br>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Borrar">
+			
+		</form>
+		
+	</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+/* selectores.css */
+
+tr td:first-child{
+	background: violet;
+}
+tr:first-child{
+	/* La primera fila de la tabla */
+	background: black;
+	color: white;
+	font-weight: bold;
+}
+
+tr:last-child{
+	background: green;
+}
+
+tr:nth-child(8){
+	background: red;
+}
+
+
+/*
+	2n + 2
+	Cada cuanto varía | Cuándo empieza
+*/
+tr:nth-child(2n+3){
+	/* Zebra */
+	background: #DDD;
+}
+tr:nth-of-type(odd){
+	background: #900;
+}
+tr:nth-of-type(even){
+	background: #090;
+}
+
+	/* Comienza con: */
+a[href^="portfolio/"]{
+	color: blue;
+}
+
+	/* Termina con: */
+a[href^=".pdf"]{
+	color: red;
+}
+	/* Contiene: */
+a[href*="google"]{
+	color: yellow;
+}
+
+table tr td::-moz-selection{
+	background: #F90;
+	color: white;
+	font-weight: bold;
+}
+
+table tr td::selection{
+	background: #F90;
+	color: white;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

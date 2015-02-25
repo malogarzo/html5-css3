@@ -1,0 +1,88 @@
+
+
+<table>
+  <tr>
+    <th>&lt;svg>&lt;image></th>
+    <td>
+      <svg width="143" height="27">
+        <image xlink:href="http://s.cdpn.io/3/svg.svg" src="http://s.cdpn.io/3/svg.png" width="143" height="27" />
+      </svg>
+    </td>
+  </tr>
+  <tr>
+    <th>&lt;img src=svg.svg></th>
+    <td>
+      <img src="http://s.cdpn.io/3/svg.svg" />
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Browser</th>
+    <th>&lt;image> technique</th>
+    <th>regular &lt;img></th>
+    <th>Downloads</th>
+  </tr>
+  <tr class="good">
+    <th>Chrome 28</th> <td>SVG</td> <td>SVG</td> <td>Only SVG</td>
+  </tr>
+  <tr>
+    <th>IE 8</th> <td>PNG</td> <td>--</td> <td>Only PNG (<a href="http://waterpigs.co.uk/notes/4RdDTh/">via</a>)</td>
+  </tr>
+  <tr class="problem">
+    <th>IE 9</th> <td>SVG</td> <td>SVG</td> <td>Aborts .png, but still <a href="http://cl.ly/Qt1g">takes time</a></td>
+  </tr>
+  <tr class="problem">
+    <th>IE 10</th> <td>SVG</td> <td>SVG</td> <td>Also claims to <a href="http://cl.ly/QsAQ">abort</a> - but seems to <a href="http://cl.ly/QsoS">download both</a></td>
+  </tr>
+  <tr class="problem">
+    <th>IE 11</th> <td>SVG</td> <td>SVG</td> <td>either <a href="https://twitter.com/stopsatgreen/status/369377796654526464">aborted</a> or <a href="https://twitter.com/andydavies/status/369404411191115776">not aborted</a> (neither good)</td>
+  </tr>
+  <style>
+  
+
+body {
+  text-align: center;
+  padding: 1rem;
+}
+
+table {
+  margin: 1rem;
+}
+th, td {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.problem {
+  background: pink;
+}
+.good {
+  background: lightgreen;
+}
+
+</style>
+  
+  <tr class="problem">
+    <th>iPhone 3GS (iOS 3)</th> <td>PNG</td> <td>SVG</td> <td>Need to test</td>
+  </tr>
+  <tr class="problem">
+    <th>iPhone 4 (iOS 4)</th> <td>PNG</td> <td>SVG</td> <td>Only PNG (<a href="http://waterpigs.co.uk/notes/4RdDTh/">via</a>)</td>
+  </tr>
+  <tr>
+    <th>iPhone 4S (iOS 5)</th> <td>SVG</td> <td>SVG</td> <td>Need to test</td>
+  </tr>
+  <tr class="good">
+    <th>iPhone 5 (iOS 6)</th> <td>SVG</td> <td>SVG</td> <td>Only SVG</td>
+  </tr>
+  <tr class="good">
+    <th>Android 2.3</th> <td>PNG</td> <td>--</td> <td>Only PNG (<a href="https://twitter.com/stopsatgreen/status/369425371260649472">via</a>)</td>
+  </tr>
+  <tr class="good">
+    <th>Android 4</th> <td>SVG</td> <td>SVG</td> <td>Only SVG (<a href="https://twitter.com/stopsatgreen/status/369386590335815680">via</a>)</td>
+  </tr>
+  <tr class="good">
+    <th>Firefox 22</th> <td>SVG</td> <td>SVG</td> <td>Only SVG</td>
+  </tr>
+</table>
+

@@ -1,0 +1,100 @@
+/* animacion1.css */
+
+/*
+	1º Creamos la animación y la nombramos
+*/
+@keyframes colores{
+	from{
+		background: blue;
+	}
+	25%{
+		background: peru;
+		font-size: 45px;
+	}
+	75%{
+		background: violet;
+	}
+	to{
+		background: red;
+	}
+}
+
+
+@keyframes rotar{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+#anima{
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	
+	animation-name: colores;
+	animation-duration: 6s;
+	/* Para que cuando la animación termine se mantengan las configuraciones marcadas en to (both)
+		backwards -> Termina como from */
+	animation-fill-mode: both;
+	animation-play-state: paused;
+	
+}
+
+#anima:hover{
+	animation-play-state: running;
+}
+
+#girar{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: orange;
+	
+	margin: 200px;	
+	animation-name: rotar;
+	animation-duration: 1s;
+	/* animation-delay: 2s; */
+	/* Cuántas veces se repite:
+		1. Número entero
+		2. Infinite */
+	animation-iteration-count: infinite;
+	animation-iteration-count: 8;
+	
+	animation-timing-function: cubic-bezier(.58,1.65,.65,1.54);
+	
+	/* Con la aceleración linear evito que se detenga mientras se repite */
+	animation-timing-function: linear;
+	
+	animation-direction: normal;
+	/* Alterna, iniciando en la dirección contraria */
+	animation-direction: alternate-reverse;
+	
+}
+
+
+#steps{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: skyblue;
+	
+	margin: 200px;	
+	animation: rotar 2s steps(10) infinite;
+}
+
+
+
+
+
+
+
+
+
+

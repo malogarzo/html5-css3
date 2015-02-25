@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Drag and Drop!</title>
+<style>
+	#contenedor{
+		width:580px;
+	}
+	#fotos{
+		width:180px;
+		float:left;
+		background-color:#BBB;
+	}
+	#fotos img{
+		margin:20px;
+		border:1px #999 solid;
+	}
+
+	#destino{
+		width:380px;
+		height:533px;
+		float:right;
+		background-color:#DDD;
+	}
+	#destino img{
+		margin:20px;
+		border:1px #999 solid;
+		cursor: move;
+	}
+	
+</style>
+
+<body>
+	<div id="contenedor">
+		<div id="fotos">
+			<div id="foto1" draggable="true">
+				<img src="foto1.jpg" width="130" height="130"/>
+			</div>
+			<div id="foto2" draggable="true">
+				<img src="foto2.jpg" width="130" height="130" />
+			</div>
+			<div id="foto3" draggable="true">
+				<img src="foto3.jpg" width="130" height="130" />
+			</div>
+		</div><!-- Cierra fotos -->
+		
+		<div id="destino">
+		
+		</div><!-- Cierra destino -->
+	</div><!-- Cierra contenedor -->
+	
+	
+<script>
+	// Primera función: cuando el usuario empiece a arrastrar una imagen
+	function empezar(e){
+		// Pregunta cuál de las imágenes estoy arrastrando, se basa en su ID
+		e.dataTransfer.setData('Text', this.id);
+		// Permitir que la imagen se mueva
+		e.dataTransfer.effectAllowed = 'move';
+	}
+	
+	// Al pasar sobre destino
+	function destino(e){
+		// Dejo de mover la imagen
+		e.dataTransfer.dropEffect = 'move';
+		// Suelto la imagen
+		return false;
+	}
+	
+	// Al soltar la imagen creo una igual en el div #destino
+	function soltar(e){
+		
+		// evitar el comportamiento predeterminado de firefox y otros navegadores
+		e.preventDefault();
+		
+		
+		// Creo una nueva imagen
+		imagen = new Image();
+		// Que sea igual a la que arrastré
+		imagen.src = e.dataTransfer.getData('Text') + '.jpg';
+		// Muestro la imagen en el elemento con ID destino
+		document.getElementById('destino').appendChild(imagen);
+	}
+	
+	//Conectamos los eventos
+	
+	// Cuando comienzo a arrastrar alguna de las 3 imágenes activo la función arrastrar
+	document.getElementById('foto1').ondragstart = empezar;
+	document.getElementById('foto2').ondragstart = empezar;
+	document.getElementById('foto3').ondragstart = empezar;
+	
+	// Cuando paso por encima de ID destino activo la función destino
+	document.getElementById('destino').ondragover = destino;
+	
+	document.getElementById('destino').ondrop = soltar;
+	
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

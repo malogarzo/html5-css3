@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Vídeo en HTML5</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Vídeo con HTML5</h1>
+		
+		<!--			
+			PreLoad:
+			. auto: Carga el vídeo al mismo tiempo que carga la página
+			
+			. metadata: Carga los datos meta (descripción del vídeo, título, subtítulos, formato, etc.)
+			
+			. none: No carga nada hasta que el usuario hace play
+		-->
+		<video controls autoplay loop preload="auto">
+			<source src="movie.mp4">
+			<source src="movie.ogg">
+			<span>Tu navegador está viejo. Insertar el vídeo desde YouTube, dar el enlace a vídeo de YouTube.</span>
+		</video>
+		
+	</body>
+</html>

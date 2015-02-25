@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Geolocalización 1</title>
+	</head>
+	<body>
+		<h1>Geolocalización</h1>
+		<input type="button" value="¿Dónde estoy?" onclick="geo()">
+		<div id="respuesta"></div>
+		
+		<script>
+var x = document.getElementById('respuesta');
+
+function geo(){
+	
+	// Preguntar si esto funciona en el navegador actual
+	if(navigator.geolocation){
+		//alert("Todo ok!");
+navigator.geolocation.getCurrentPosition(mostrar);
+	} else {
+		alert("Tu navegador es viejo");
+	}	
+} // cierra la func. geo
+
+function mostrar(pos){
+	x.innerHTML = "Latitud: " + 	pos.coords.latitude + "Longitud: " + pos.coords.longitude;
+}
+			
+			
+		</script>
+		
+	</body>
+</html>
+

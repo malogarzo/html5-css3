@@ -1,0 +1,59 @@
+/* formulario.css */
+
+textarea{
+	/*
+	Opción 1:
+	No se puede modificar el tamaño */
+	/*resize: none;*/
+	
+	/* height: 300px;
+	width: 200px; */
+	
+	/* 
+		Opción 2:
+		Solo en vertical u horizontal
+	
+	resize: vertical;
+	resize: horizontal;
+	*/
+	/* 
+		Opción 3:
+		Límite de tamaño
+	*/
+	
+	max-width: 500px;
+	max-height: 300px;
+	
+}
+
+
+
+
+
+input:not([type="submit"]), input:not([type="reset"]), input:not([type="range"]){
+	width: 300px;
+	height: 50px;
+	padding: 5 10px;
+	margin: 10px 0;
+	transition: all 0.5s;
+}
+/*
+	Excluir un botón según su atributo y valor, lo excluimos con :not()
+*/
+input:not([type="submit"]):focus{
+	width: 400px;
+	box-shadow: 0 0 5px black;
+}
+
+
+input:not([type="submit"]):invalid{
+	background: red;
+}
+input:not([type="submit"]):valid{
+	background: green;
+}
+
+
+
+
+

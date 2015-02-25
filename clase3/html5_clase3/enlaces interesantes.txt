@@ -1,0 +1,4 @@
+http://www.youtube.com/watch?v=EkluES9Rvak Charla Lea Verou
+http://leaverou.github.io/regexplained/ Playground Lea Verou
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions

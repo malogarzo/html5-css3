@@ -1,0 +1,47 @@
+/* colores.css */
+
+div{
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	margin: 30px;
+	font-size: 30px;
+}
+
+#uno{
+	background: rgb(255,0,0);
+}
+
+#dos{
+	background: hsl(120, 90%, 90%);
+}
+
+#tres{
+	/* Canal alpha, de 1 a 0 */
+	background: rgba(0,255,0,0.5);
+	/* color: rgba(0,0,0,0.2); */
+}
+
+#cuatro{
+	background: hsla(50, 90%, 50%, 0.3);
+}
+
+#cinco{
+	/* Todo el elemento, incluyo lo que está dentro de ese elemento */
+	opacity: 0.2;
+}
+#cinco:hover{
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+

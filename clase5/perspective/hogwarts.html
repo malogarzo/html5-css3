@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Anchor point</title>
+		<meta charset="utf-8">
+		<style>
+		/**
+ * Sending a Hogwarts letter (:
+ */
+ 
+ @keyframes send{
+ 	0%{
+ 		transform: rotateZ(0deg) rotateY(0deg) translateZ(0);
+ 	}
+ 	50%{
+ 		transform: rotateZ(360deg) rotateY(360deg) translateZ(673px);
+ 	}
+ 	100%{
+ 		transform: rotateZ(0deg) rotateY(360deg) translateZ(673px);
+ 	}
+ }
+
+body{
+	background: radial-gradient(#FFF, #DDD) no-repeat;
+	background-size: 100% 1000px;
+	
+}
+
+div.dad{
+	position: relative;
+	width: 160px;
+	height: 110px;
+	margin: auto;
+	margin-top: 75px;
+	transform: perspective(800px);
+	transform-style: preserve-3d;
+	transition: all 2s;
+	animation: send 6s infinite ease;
+}
+.dad:hover{
+	transform: rotateY(180deg);
+}
+div.front{
+	position: absolute;
+	background-image: url("http://data1.whicdn.com/images/12767731/original.jpg");
+	background-size: 100%;
+	
+	width: 260px;
+	height: 179px;
+}
+.back{
+	position: absolute;
+	background-image: url("http://4.bp.blogspot.com/-c1x1V9bBopc/TxiJibwq0FI/AAAAAAAACHc/HvdPFXCn9Ks/s640/Harry-s-Letter-From-Hogwarts-harry-james-potter.jpg");
+	background-size: 100%;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	
+	width: 260px;
+	height: 179px;
+}
+
+		</style>
+		</head>
+		<body>
+			<div class="dad">
+				<div class="front"></div>
+				<div class="back">
+				</div>
+			</div>
+
+		</body>
+	</html>

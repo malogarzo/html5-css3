@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM</title>
+		<style>#elemento{background: red;}</style>
+		<script>
+			function crear(){
+var ancho = document.getElementById('ancho').value;
+var alto = document.getElementById('alto').value;
+
+document.getElementById('elemento').style.width = ancho;
+document.getElementById('elemento').style.height = alto;
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Identificamos elementos con ID -->
+		Ancho <input type="text" id="ancho">
+		Alto <input type="text" id="alto">
+		<input type="button" value="Crear" onclick="crear()">
+		
+		<div id="elemento"></div>
+	</body>
+</html>
+
+
+

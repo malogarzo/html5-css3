@@ -1,0 +1,49 @@
+/* border_radius.css */
+
+div{
+	width: 150px;
+	height: 150px;
+	background: red;
+	
+	margin: 40px;
+}
+
+#uno{
+		/* Un valor: Todas las esquinas por igual */
+	border-radius: 5px;
+}
+
+#dos{
+		/* Dos valores: Esquinas contrarias */
+	border-radius: 0 60px;
+}
+
+#tres{
+			/* Cuatro esquinas distintas, la primera es la esquina superior izquierda. Clock-wise */
+	border-radius: 0 35px 5px 60px;
+}
+
+#cuatro{
+				/* Dos valores | 15px */
+	border-radius: 10px / 145px  15px;
+}
+
+#cinco{
+	/* width: 300px; 
+		Círculos o elipses */
+	border-radius: 50%;
+}
+
+#seis{
+	height: 75px;
+	border-radius: 50% 0 0 50%;
+}
+
+
+
+
+
+
+
+
+

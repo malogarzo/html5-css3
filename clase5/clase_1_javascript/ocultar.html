@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ocultar/Mostrar</title>
+		<script>
+			function mostrar(submenu){
+				
+				var objeto = document.getElementById(submenu);
+				
+				if(objeto.style.display == ""){
+					objeto.style.display = "none";
+				} else {
+					objeto.style.display = "";
+				}
+				
+			}// cierra la función
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#" onclick="mostrar('lavarropas')">Lavarropas</a>
+				<ul id="lavarropas" style="display: none;">
+					<li>Medias</li>
+					<li>Zapatillas</li>
+					<li>Remeras</li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="mostrar('super')">Supermercado</a>
+				<ul id="super" style="display: none;">
+					<li>Fideos</li>
+					<li>Salsa</li>
+					<li>Aceitunas</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>
+
+
+
+

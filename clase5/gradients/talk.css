@@ -1,0 +1,113 @@
+﻿#intro , #intro_real{
+	background: rgba(0,0,0,.7);
+	padding: 0;
+	border: 0;
+}
+
+#intro h1 , #intro_real h1{
+	width: 630px;
+	min-height: 450px;
+	margin: 5% auto 0;
+	font-size: 58px;
+	text-align:center;
+	font-family:'Bad Script', Arial;
+}
+#intro h1 span.princi, #intro_real h1 span.princi{
+	font-size: 80px;
+	color: #D6D405;
+	text-shadow: #000 2px 2px 8px;
+	font-weight:bold;
+}
+
+#intro .attribution, #intro_real .attribution {
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 100%;
+	line-height: .3;
+	color: rgba(0,0,0,.7);
+	text-shadow: none;
+	background: url(img/rainbow-wood.jpg) bottom;
+	/*padding:.6em 0 0;*/
+	overflow: hidden;
+}
+
+
+#css-controls-demo label {
+	display: block;
+}
+
+img.perfil{
+	border-radius: 6px;
+	border: 1px solid #000;
+	box-shadow: 5px 2px 8px rgba(255,255,255,0.4);
+}
+
+.motores img, .otros img, .futuro img{
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+}
+.otros img{
+	border-radius: 7px;
+	width: 90%;
+	max-width: 900px;
+}
+.futuro img{
+	border-radius: 7px;
+	width: 90%;
+	max-width: 600px;
+}
+
+.maxthon img{
+	float:left;
+	margin-left: 80px;
+	margin-top:50px;
+}
+.maxthon ul{
+	width: 750px;
+	float:right;
+}
+
+.zafar{
+	background: url("img/awesome.jpg") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  color: black;
+}
+.english{
+	background: url("img/ingles_fondo.jpg") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+.english h2, .friends h2{
+	position: absolute;
+		top: 45%;
+		left: 0;
+		right: 0;
+		margin-top: -.6em;
+		font-size: 400%;
+		line-height: 1;
+		text-align: center;
+	font-family:'Bad Script', Arial;
+	text-shadow: 2px 2px 5px #000, -2px -2px 15px #000;
+}
+.friends h2{
+	font-size: 280%;
+}
+.friends{
+	background: url("img/fondo_friends.jpg") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+p.no-strong{
+	font-weight: normal;
+}
+

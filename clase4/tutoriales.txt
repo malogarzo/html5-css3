@@ -1,0 +1,8 @@
+
+Links a tutoriales:
+http://tympanus.net/codrops/
+http://tympanus.net/codrops/2012/04/17/rotating-words-with-css-animations/
+http://tympanus.net/Tutorials/TypographyStyles/
+http://tympanus.net/Tutorials/CSS3SlidingImagePanels
+http://tympanus.net/Tutorials/OriginalHoverEffects/
+http://css3menu.com

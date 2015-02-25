@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fuentes desde servidor</title>
+		<meta charset="utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<style>
+			/*
+			1º paso: declaro la fuente
+			*/
+			@font-face{
+				src: url(dos.ttf);
+				/* WOFF */
+				font-family: otro;
+			}
+			
+			h1{
+				font-size: 120px;
+				/* 
+				2º paso:
+				Llamo a la fuente con el nombre indicado en la declaración */
+				font-family: otro, Arial;
+			}
+			
+			h2{
+		font-family: 'Roboto Condensed', sans-serif;
+				font-size: 120px;
+				color: red;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1>Fuente externa</h1>
+		<h2>Fuente desde Google</h2>
+	</body>
+</html>

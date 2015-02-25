@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Media Queries 4</title>
+		<meta charset="utf-8">
+		<style>
+			ul{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			ul li a{
+				display: block;
+				background: #800;
+				color: white;
+				padding: 5px 0;
+				text-decoration: none;
+				text-align: center;
+			}
+			ul li a:hover{
+				background: #FFF;
+				color: #800;
+			}
+			
+@media all and (orientation: portrait){
+	/* Más alto que ancho */
+	ul li a{
+		border-bottom: 2px dashed #FFF;
+		max-width: 200px;
+	}
+}
+
+@media all and (orientation: landscape){
+	/* Más ancho que alto */
+	ul li a{
+		float: left;
+		/* box-sizing */
+		width: 23%;
+		max-width: 200px;
+		border-right: 2px dashed white;
+	}
+	ul li:last-of-type a{
+		border-right: none;
+	}
+}
+		</style>
+	</head>
+	<body>
+		<h1>Orientaciones</h1>
+		
+	<ul>
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">Nosot</a></li>
+		<li><a href="#">Serv</a></li>
+		<li><a href="#">Cont</a></li>
+	</ul>
+		
+		
+	</body>
+</html>

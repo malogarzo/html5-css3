@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario</title>
+		<script>
+			function validar(){
+				if(document.getElementById('edad').value >= 18){
+					alert("Es mayor a 18");
+				} else {
+					alert("Es menor de edad");
+				} // cierra else
+			} // cierra función
+			
+			function borrar(){
+				document.getElementById('nombre').value = "";
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			Nombre <input type="text" id="nombre" value="Escriba aquí su nombre" onfocus="borrar()"><br>
+			Apellido <input type="text" id="apellido"><br>
+			Edad <input type="text" id="edad" onblur="validar()"><br>
+			<input type="button" value="Enviar"><br>
+		</form>
+	</body>
+</html>
+
+
+
+

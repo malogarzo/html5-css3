@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<title>Geolocalización con Google Maps</title>
+
+<!-- API de Google Maps -->
+<!-- El sensor es true para que pueda utilizar GPS de ser necesario -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
+</script>
+
+<style>
+	#mapa{
+		width:500px;
+		height:500px;
+	}
+</style>
+
+<body onload="mostrar_mapa()">
+<div id="mapa"></div>
+<div id="info"></div>
+
+<script>
+function mostrar_mapa(){
+	// Una nueva posición definida
+	var pos = new google.maps.LatLng(-34.6027232,-54.3815971);
+	
+	// opciones para el mapa
+	var opciones = {
+		zoom: 15,
+		center: pos,
+		mapTypeId:google.maps.MapTypeId.SATELLITE   
+	} //cierra opciones
+	
+	var mapa = new google.maps.Map(
+		document.getElementById('mapa'), opciones
+	);
+	
+}
+</script>
+
+</body>
+</html>
+
+
+
